@@ -7,3 +7,4 @@ azure-cognitiveservices-speech
 pydub
 gTTS
 spacy
+streamlit
