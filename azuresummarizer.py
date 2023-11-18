@@ -5,8 +5,8 @@ import streamlit as st
 
 # Get value from .env file
 load_dotenv()
-endpoint = st.secret["endpoint"]
-key = st.secret["key"]
+endpoint = st.secrets["endpoint"]
+key = st.secrets["key"]
 
 def create_sublists(paragraph, sublist_size, sub_size=5):
     sentences = paragraph.split('. ')  # Split at period followed by a space
