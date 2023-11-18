@@ -1,6 +1,5 @@
 from azuresentiment import analyze_sentiment
 import streamlit as st
-from summarizer1 import summarizer
 from azuresummarizer import generate_summary
 
 st.set_page_config(page_title="SummarizeHub", page_icon="📝", layout="centered")
@@ -27,7 +26,6 @@ styled_text = gradient_text(text, color1, color2)
 st.write(f"<div style='text-align: center;'>{styled_text}</div>", unsafe_allow_html=True)
 
 # Input box from user
-st.markdown("<h5 style='text-align: center;'>OR</h5>", unsafe_allow_html=True)
 text = st.text_area("Input Text For Summary", height=200)
 
 # Checkbox to allow user to analyze sentiment
@@ -57,7 +55,7 @@ if col1.button('SUMMARIZE'):
             # To generate summarize
             summary=generate_summary("content.txt")
             st.markdown("<h2> Your Summary : </h2>" ,  unsafe_allow_html=True)        
-            st.markdown("<h3> > Summary 2 : </h3>" ,  unsafe_allow_html=True)
+            st.markdown("<h3> > Summary : </h3>" ,  unsafe_allow_html=True)
             st.write(summary)
 
 # Adding a footer
